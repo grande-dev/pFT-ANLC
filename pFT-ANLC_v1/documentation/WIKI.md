@@ -26,7 +26,7 @@ To use the framework, the following steps are recommended:
 4. Set up the configuration conditions for the *Falsifier*;
 5. *Start* the training;  
 6. The *procedure stops* when no counterexample is found or when a timeout is reached.  
-  Dismiss stale pull request approvals when new commits are pushed
+  
 
 ## Step-by-step example
 Only 4 files need to be modified to run a custom example: `main_2d_faulty_template.py`, `utilities/models`, `configuration/config_2d_faulty_template.py` and `systems_dynamics/dynamics_2d_faulty_template.py`.  
@@ -89,7 +89,7 @@ The files can be modified as follows:
 	```
 	   
 	
-	3. If your dynamics has scalar parameters, define them in `configuration/config_2d_template.py/def set_params()` and add the actuator health stati parameters ($h_i$):
+	3. If your dynamics has scalar parameters, define them in `configuration/config_2d_template.py/def set_params()` and add the actuator health stati parameters (h_j):
 	```python
 		dyn_sys_params = {
 			'alpha': 2.1,
