@@ -25,7 +25,7 @@ The *pFT-ANLC* software framework can:
 - [x] Cope with complete loss of actuator, partial loss of actuator efficiency, or jammed actuators.  
   
 ## Installation  
-Instructions on installation are available within the ![INSTALLATION](./pFT-ANLC_v1/INSTALLATION.md) file.    
+Instructions on installation are available within the ![INSTALLATION](./installation/INSTALLATION.md) file.    
   
 ## Step-by-step guide
 To synthesise control laws and CLFs for your own dynamics, a step-by-step example is reported in the ![WIKI](./pFT-ANLC_v1/documentation/WIKI.md) file.  
