@@ -51,9 +51,10 @@ The code currently supports:
 - [x] 1-dimensional systems  
 - [x] 2-dimensional systems  
 - [x] 3-dimensional systems  
-- [ ] >= 4-dimensional systems  
+- [x] 4-dimensional systems  
+- [ ] >= 5-dimensional systems  
 To scale up to higher dimensional systems, additional **Discrete Falsifier** functions need to be developed.
-As reference, use `utilities/Function/AddLieViolationsOrder3_v4`.  
+As reference, use `utilities/Function/AddLieViolationsOrder4_v4`.  
   
 ## Contacts
 The authors can be contacted for feedback, clarifications or requests of support at:  
