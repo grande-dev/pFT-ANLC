@@ -2,7 +2,9 @@
 This repository contains the code for the paper:  
 **Passive Fault-Tolerant Augmented Neural Lyapunov Control: a method to synthesise control functions for marine vehicles affected by actuators faults** (pFT-ANLC)
   
-The work can be read at [webpage link to be updated](https://ieeexplore.ieee.org/document/10171339).  
+**The code is currently under release. Stay tuned.**  
+  
+The work can be read open-access [here](https://www.sciencedirect.com/science/article/pii/S0967066124000959).  
   
   
 ## Scope of the code
@@ -62,20 +64,19 @@ The authors can be contacted for feedback, clarifications or requests of support
   
 
 ## Reference  
-The article can be accessed at [webpage link to be updated](https://ieeexplore.ieee.org/document/10171339/).
+The article can be read open-access [here](https://www.sciencedirect.com/science/article/pii/S0967066124000959).
   
 This work can be cited with the following BibTeX entry:  
 
 ```bibtex
-@article{,
-  title={Passive Fault-Tolerant Augmented Neural Lyapunov Control: a method to synthesise control functions for marine vehicles affected by actuators faults},
-  author={Davide Grande, and Andrea, Peruffo and Georgios, Salavasidis and Enrico, Anderlini and Davide, Fenucci and Alexander B. Phillips and Elias B. Kosmatopoulos and Giles Thomas},
-  journal={},
-  volume={},
-  pages={},
-  year={},
-  publisher={},
-  doi={}
+@article{grande2024passive,
+  title={Passive Fault-Tolerant Augmented Neural Lyapunov Control: A method to synthesise control functions for marine vehicles affected by actuators faults},
+  author={Grande, Davide and Peruffo, Andrea and Salavasidis, Georgios and Anderlini, Enrico and Fenucci, Davide and Phillips, Alexander B and Kosmatopoulos, Elias B and Thomas, Giles},
+  journal={Control Engineering Practice},
+  volume={148},
+  pages={105935},
+  year={2024},
+  publisher={Elsevier}
 }
 ``` 
 
