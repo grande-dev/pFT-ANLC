@@ -3,9 +3,9 @@
 
 "I have a 2-dimensional system with 3 actuators and 2 possible faults that I want to control, how can I set the code up?"
 
-This tutorial will guide you through the 6 steps encompassing what you need to start the synthesis of your control functions.
+This 20 minutes-long tutorial will guide you through the 6 steps encompassing all you need to start the synthesis of your control functions.
 
-Let us consider the following system:
+Let us consider the following dynamical system:
 
 $$
 \begin{cases}
@@ -22,7 +22,7 @@ To use the framework, the following steps are recommended:
 
 1. Define the *system dynamics*;
 2. Set up the training *parameters*;
-3. Set up the *Neural Networks* architecture;
+3. Set up the *Artificial Neural Networks* architecture;
 4. Set up the configuration conditions for the *Falsifier*;
 5. *Start* the training;  
 6. The *procedure stops* when no counterexample is found or when a timeout is reached.  
@@ -89,7 +89,7 @@ The files can be modified as follows:
 	```
 	   
 	
-	3. If your dynamics has scalar parameters, define them in `configuration/config_2d_template.py/def set_params()` and add the actuator health stati parameters (h_j):
+	3. If your dynamics has scalar parameters, define them in `configuration/config_2d_faulty_template.py/dyn_sys_params` and add the actuator health stati parameters (h_j):
 	```python
 		dyn_sys_params = {
 			'alpha': 2.1,
@@ -113,7 +113,7 @@ The files can be modified as follows:
  	```python
 		alpha = parameters['alpha']
 		beta = parameters['beta']
-		h1 = parameters['h1']  # TODO: pass from the callback
+		h1 = parameters['h1']
 		h2 = parameters['h2']
 		h3 = parameters['h3']
 
@@ -170,7 +170,7 @@ The files can be modified as follows:
 			}
 	```  
 	  
-3. **Set up the *Neural Networks* architecture**:   
+3. **Set up the *Artificial Neural Networks* architecture**:   
 	1. Select the structure of the Lyapunov ANN:  
 	```python
 		# Parameters for Lyapunov ANN
@@ -200,7 +200,7 @@ The files can be modified as follows:
 	```  
 	This configuration defines a linear control ANN with random initial values. If `control_initialised` was set to `True` instead, `init_control` would be chosen as initial control weight.  
 	If a nonlinear control law is to be used instead, set `use_lin_ctr=False`; the nonlinear control law weight is by default initialised randomly.  
-	The size of the control gain (both linear and nonlinear) is defined by the last entry of `size_ctrl_layers`; with the choice above, three control signals will be output.  
+	The size of the control vector (both linear and nonlinear) is defined by the last entry of `size_ctrl_layers`; with the choice above, three control signals will be output.  
 
 
 4.  **Set up the configuration conditions for the *Falsifier***:
@@ -208,12 +208,10 @@ The files can be modified as follows:
     	```python
     	    falsifier_params = {
 				# a) SMT parameters
-				'gamma_underbar': 0.1,  # domain lower boundary
+				'epsilon': 0.1,         # domain lower boundary
 				'gamma_overbar': 2.0,   # domain upper boundary
-				'zeta_SMT': 200,  # how many points are added to the dataset after a CE box
-								# is found
-				'epsilon': 0.0,   # parameters to further relax the SMT check on the Lie derivative conditions.
-								# default value = 0 (inspect utilities/Functions/CheckLyapunov for further info).
+				'zeta_SMT': 200,        # how many points are added to the dataset 
+							# after a CE box is found
 				
 				# b) Discrete Falsifier parameters
 				'grid_points': 50,  # sampling size grid

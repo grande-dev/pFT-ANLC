@@ -1,6 +1,6 @@
 ## Installation
 
-This software tool relies on `Python3.9`.  
+This software tool runs on `Python 3.9`.  
 The code was tested on OS: `Linux Ubuntu 20.04`, `macOS 13`. The following installation methods allow for portability over different OSs.  
 
 Three approaches are hereby provided to streamline the installation of the following main dependencies:
@@ -17,13 +17,13 @@ cd pFT-ANLC
 
   
 ### Approach 1: install the requirements at system level (not recommended)
-Once Python3.9 is available on your machine, you can install the required packages at system level with:
+If Python 3.9 is available on your machine, you can install the required packages at system level with:
 ```  
 pip3 install -r ./installation/requirements_v39.txt  
 ```
 
 
-### Approach 2: clone the Anaconda environment
+### Approach 2: clone the provided Anaconda environment
 If [Anaconda](https://docs.anaconda.com/free/anaconda/install/) is installed on your machine, you can clone the environment with: 
 
 ```
@@ -34,9 +34,8 @@ conda activate env_pftanlc
 (use `conda deactivate` upon completion.)
 
 
-### Approach 3: create a Python virtual environment
-  
-Once Python3.9 is available on your machine, the code can be run in a [virtual environment](https://docs.python.org/3/library/venv.html). Start as follows:
+### Approach 3: install the tool within a Python virtual environment
+If Python 3.9 is available on your machine, the code can be run in a [virtual environment](https://docs.python.org/3/library/venv.html). Start as follows:
 ```
 pip3 install virtualenv
 python3 -m venv pftanlc_venv
@@ -55,7 +54,7 @@ pip3.9 install -r ./installation/requirements_v39.txt
 These commands will run the training for the *template system*:
 ```
 cd pFT-ANLC_v1/code
-python3 template_to_add.py
+python3 main_2d_auv_3thrusters_faulty.py
 ```
-Upon completion, you should expect to find in 'code/results/campaign_3000/0' figures such as:   
+Upon completion, you should expect to find in 'code/results/campaign_4/0' figures such as:   
 <img src="https://github.com/grande-dev/pFT-ANLC/blob/master/pFT-ANLC_v1/documentation/images/Lyapunov_function_example.png" width=30% height=30%>
